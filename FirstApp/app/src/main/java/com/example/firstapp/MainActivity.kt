@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
         if(AmountInput.text.isNotEmpty()){
                 val dollarValue = AmountInput.text.toString().toFloat()
                 val converted = dollarValue * 0.85
-
             textView.text = converted.toString()
         }else{
             textView.text=getString(R.string.HelloApplication)
