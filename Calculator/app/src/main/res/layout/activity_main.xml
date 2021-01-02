@@ -1,18 +1,268 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
+    tools:context=".MainActivity"
+    android:bacgkround="@color/yow"
+    android:layout_gravity="fill"
+    android:layout_weight="1"
+    android:layout_margin="0pt"
+    android:orientation="vertical">
+    <EditText
+        android:id="@+id/etShowNumber"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_weight="1"
+        android:ems="10"
+        android:gravity="right|bottom"
+        android:inputType="textPersonName"
+        android:text="@string/theNums"
+        android:textSize="46sp"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|fill"
+        android:gravity="bottom|start|fill">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1pt">
+
+            <Button
+                android:id="@+id/BUAC"
+                android:text="@string/AC"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_marginRight="1pt"
+                android:textSize="18sp"
+                android:onClick="BUCleanAC">
+            </Button>
+            <Button
+                android:id="@+id/BUPlusMinus"
+                android:text="@string/Plusminus"
+                android:background="@color/whiteback"
+                android:layout_width="30pt"
+                android:layout_height="25pt"
+                android:layout_weight="1"
+                android:layout_marginRight="1pt"
+                android:textSize="18sp"
+                android:onClick="BUNumberEvent">
+            </Button>
+            <Button
+                android:id="@+id/BUPer"
+                android:text="@string/Modulo"
+                android:layout_width="30pt"
+                android:layout_height="25pt"
+                android:layout_weight="1"
+                android:layout_marginEnd="1pt"
+                android:textSize="18sp"
+                android:onClick="BUModuloEvent"
+                android:background="@color/whiteback">
+            </Button>
+            <Button
+                android:id="@+id/BUdiv"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_marginEnd="1pt"
+                android:text="@string/divIt"
+                android:textSize="18sp"
+                android:onClick="BUDivEvent">
+            </Button>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1pt">
+            <Button
+                android:id="@+id/BU7"
+                android:layout_weight="1"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_marginEnd="1pt"
+                android:textSize="18sp"
+                android:text="@string/seven"
+                android:onClick="BUNumberEvent">
+            </Button>
+            <Button
+                android:id="@+id/BU8"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_marginEnd="1pt"
+                android:textSize="18sp"
+                android:text="@string/eight"
+                android:onClick="BUNumberEvent">
+            </Button>
+            <Button
+                android:id="@+id/BU9"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:layout_marginEnd="1pt"
+                android:text="@string/nine"
+                android:textSize="18sp"
+                android:onClick="BUNumberEvent">
+            </Button>
+            <Button
+                android:id="@+id/BUX"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_marginEnd="1pt"
+                android:textSize="18sp"
+                android:text="@string/X"
+                android:onClick="BuOperatorEvent">
+            </Button>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1pt">
+        <Button
+            android:id='@+id/BUFour'
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:layout_marginEnd="1pt"
+            android:layout_weight="1"
+            android:text="@string/four"
+            android:textSize="18sp"
+            android:onClick="BUNumberEvent">
+        </Button>
+        <Button
+            android:id="@+id/BUFive"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:layout_weight="1"
+            android:layout_marginEnd="1pt"
+            android:text="@string/five"
+            android:textSize="18sp"
+            android:onClick="BUNumberEvent">
+        </Button>
+        <Button
+            android:id="@+id/six"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:layout_weight="1"
+            android:layout_marginEnd="1pt"
+            android:text="@string/six"
+            android:textSize="18sp"
+            android:onClick="BUNumberEvent">
+        </Button>
+        <Button
+            android:id="@+id/minus"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:layout_weight="1"
+            android:layout_marginEnd="1pt"
+            android:text="@string/minus"
+            android:textSize="18sp"
+           android:onClick="BUMinusEvent">
+        </Button>
+        </TableRow>
+        <TableRow
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="1pt">
+            <Button
+                android:id="@+id/BUThree"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_marginEnd="1pt"
+                android:text="@string/three"
+                android:textSize="18sp"
+                android:onClick="BUNumberEvent">
+            </Button>
+            <Button
+                android:id='@+id/BUTwo'
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="1pt"
+                android:layout_weight="1"
+                android:text="@string/two"
+                android:textSize="18sp"
+                android:onClick="BUNumberEvent">
+            </Button>
+            <Button
+                android:id="@+id/BUOne"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:layout_marginEnd='1pt'
+                android:text='@string/one'
+                android:textSize="18sp"
+                android:onClick="BUNumberEvent">
+            </Button>
+            <Button
+                android:id='@+id/BUPlus'
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="1pt"
+                android:layout_weight="1"
+                android:text="@string/Plus"
+                android:textSize="18sp"
+                android:onClick="BUPlusEvent">
+            </Button>
+        </TableRow>
+    </TableLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:baselineAligned="true">
+        <Button
+            android:id="@+id/BUDot"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:layout_weight="1"
+            android:layout_marginEnd="1pt"
+            android:text="@string/dot"
+            android:textSize="18sp"
+            android:onClick="BUDotEvent">
+        </Button>
+        <Button
+            android:id="@+id/BUZero"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:layout_weight="1"
+            android:layout_marginEnd="1pt"
+            android:text="@string/zero"
+            android:textSize="18sp"
+            android:onClick="BUNumberEvent">
+        </Button>
+        <Button
+            android:id="@+id/BUResult"
+            android:layout_height="30pt"
+            android:layout_weight="1"
+            android:layout_width="30pt"
+            android:layoutmarginEnd="1pt"
+            android:text="@string/Result"
+            android:textSize="18sp"
+            android:onClick="BUResultEvent">
+        </Button>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
