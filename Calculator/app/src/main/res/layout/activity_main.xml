@@ -77,7 +77,7 @@
                 android:textSize="18sp"
                 android:gravity="center"
                 android:background="@color/buop"
-                android:onClick="BUDivEvent"/>
+                android:onClick="BUOperatorEvent"/>
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -127,7 +127,7 @@
                 android:text="@string/X"
                 android:gravity="center"
                 android:background="@color/buop"
-                android:onClick="BuOperatorEvent">
+                android:onClick="BUOperatorEvent">
             </Button>
         </TableRow>
         <TableRow
@@ -171,7 +171,7 @@
             android:onClick="BUNumberEvent">
         </Button>
         <Button
-            android:id="@+id/minus"
+            android:id="@+id/BUminus"
             android:layout_width="30pt"
             android:layout_height="30pt"
             android:layout_weight="1"
@@ -180,7 +180,7 @@
             android:gravity="center"
             android:background="@color/buop"
             android:textSize="18sp"
-           android:onClick="BUMinusEvent">
+           android:onClick="BUOperatorEvent">
         </Button>
         </TableRow>
         <TableRow
@@ -233,7 +233,7 @@
                 android:textSize="18sp"
                 android:gravity="center"
                 android:background="@color/buop"
-                android:onClick="BUPlusEvent">
+                android:onClick="BUOperatorEvent">
 
             </Button>
         </TableRow>

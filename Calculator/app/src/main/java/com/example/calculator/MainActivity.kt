@@ -13,42 +13,71 @@ class MainActivity : AppCompatActivity() {
     }
     var isnewOP = true
     var thedot = false
+    var operator = ""
+    var oldnumber =""
     fun BUDotEvent(view:View){
+
         print("Lol")
     }
     fun BUResultEvent(view:View){
-        print("yow")
-    }
-    fun BUDivEvent(view:View){
-        print("los")
-    }
-    fun BUMinusEvent(view:View){
-        print("dol")
-    }
-    fun BUModuloEvent(view:View){
-        print("ks")
+        val newnums = etShowNumber.text.toString()
+        var finalans:Number?=null
+
+        when(operator){
+            "+"->{
+                finalans =oldnumber.toInt() + newnums.toInt()
+            }
+            "-"->{
+                finalans = oldnumber.toDouble() -  newnums.toDouble()
+            }
+            "X"->{
+                finalans = oldnumber.toDouble() * newnums.toDouble()
+            }
+            "/"->{
+                finalans = oldnumber.toDouble() / newnums.toDouble()
+            }
+
+
+        }
+        etShowNumber.setText(finalans.toString())
+
     }
     fun BUCleanAC(view:View){
         print("sam")
         etShowNumber.setText("")
 
+    }
 
-    }
-    fun BUPlusEvent(view:View){
-        print("Gdsa")
-    }
-    fun BuOperatorEvent(view:View){
-        print("Das")
+    fun BUOperatorEvent(view:View){
+
+        val BUSelect= view as Button
+        when(BUSelect.id){
+            BUX.id->{
+                operator="X"
+            }
+            BUdiv.id->{
+                operator="/"
+            }
+            BUPlus.id->{
+                operator ="+"
+            }
+            BUminus.id->{
+                operator="-"
+            }
+
+        }
+        oldnumber = etShowNumber.text.toString()
+        isnewOP=true
+        thedot=false
     }
     fun BUNumberEvent(view:View){
         if (isnewOP){
             etShowNumber.setText("")
         }
         isnewOP = false
-        val buSelect = view as Button
+        val BUSelect= view as Button
         var buClickValue:String = etShowNumber.text.toString()
-
-        when(buSelect.id){
+        when(BUSelect.id){
             BUOne.id->{
                 buClickValue+="1"
             }
