@@ -6,11 +6,16 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
-
+    lateinit var listsRecyclerView: RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        listsRecyclerView = findViewById(R.id.lists_recyclerview)
+        listsRecyclerView.layoutManager = LinearLayoutManager(this)
+        listsRecyclerView.adapter = ListSelectionRecyclerViewAdapter)_
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
 
