@@ -1,54 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Jujur Saja Ku Tak Mampu </title>
-</head>
-<body>
+### Libraries Penting pada Android Development
 
-    <h3>Libraries Penting pada Android Development</h3>
-    <ul>
-        <li>android.app : Menyediakan Akses ke application model dan menjadi landasan pada <strong>seluruh</strong> Aplikasi Android<br></li><br>
-        <li>android.content : Memfasilitasi akses ke <strong>Ke Konten , Publikasi , dan penukaran pesan</strong> antar komponen aplikasi </li><br>
-        <li>android.database : Digunakan untuk akses data yang disediakan oleh <strong>Penyedia Konten</strong> dan <strong>SQL lite database</strong> </li><br>
-        <li>android.view : Fundamental <strong>building blocks</strong> untuk user interface</li><br>
-        <li>android.widget : Kumpulan <strong>Pre-built</strong> komponen User Interface, seperti <strong>button,labels,layout_managers,dll</strong></li><br>
-        <li>android.text : Digunakan untuk render dan <strong>manipulasi text</strong> pada perangkat display</li><br>
-    </ul>
+-   android.app : Menyediakan Akses ke application model dan menjadi landasan pada **seluruh** Aplikasi Android
+-   android.content : Memfasilitasi akses ke **Ke Konten , Publikasi , dan penukaran pesan** antar komponen aplikasi
+-   android.database : Digunakan untuk akses data yang disediakan oleh **Penyedia Konten** dan **SQL lite database**
+-   android.view : Fundamental **building blocks** untuk user interface
+-   android.widget : Kumpulan **Pre-built** komponen User Interface, seperti **button,labels,layout\_managers,dll**
+-   android.text : Digunakan untuk render dan **manipulasi text** pada perangkat display
 
-    <h3>Android Frameworks key Services</h3>
-    <ul>
-        <li><strong>Activity Manager</strong> : Control seluruh aspek aplikasi lifecycle dan tumpukan aktivitas</li><br>
-        <li><strong>Content Providers</strong> : Membolehkan aplikasi untuk di publish dan membagikan data dengan aplikasi lain</li><br>
-        <li><strong>Resource Manager</strong> : Menyediakan akses ke non code embedded resources seperti <strong>String, color settings, dan user interface layouts.</strong></li><br>
-        <li><strong>Notifications Manager</strong>: Membolehkan aplikasi untuk display <strong>Alert atau notifikasi</strong> kepada user</li><br>
-    </ul>
+### Android Frameworks key Services
 
-    <h2> Anantomy of an Android application</h2>
-    <p>Aplikasi android dibentuk dengan cara mengabungkan satu atau lebih komponen yang dikenal dengan <strong>Activities</strong></p>
-        <ul>
-        <li><Strong>Android Activities</Strong> 
-        Sebuah activity adalah standalone module dari <strong>sebuah</strong> fungsionalitas aplikasi
-        Sebagai contoh , apabila memiliki apliaksi email, ada sebuah activity yang tugasnya untuk <strong>Mengirim pesan</strong> dant
-        ada juga activity yang tugasnya untuk <strong>Validasi Email</strong>
-        </li><br>
-                <h4>Note untuk Android Activity</h4>
-                <img src="Android_cycles.png",alt="gaADaAnjir" height="450p" width="1000p">
-                <ul>
-                    <li><strong>onCreate()</strong> : Inisiasi kebutuhan activity seperti variable dan komponen lainnya</li>
-                    <li><strong>onStart()</strong> : Dieksekusi sehingga activity dilihat oleh user</li>
-                    <li><strong>onResume()</strong> : Dieksekusi jika user berinteraksi dengan aplikasi</li>
-                    <li><strong>onPause()</strong>: Dieksekusi jika activity berjalan di latarbelakang / sedang digantikan oleh actvitiy lain</li>
-                    <li><strong>onStop()</strong> : Dieksekusi jika sistem kehabisan memori / diberhentikan oleh algoritma / sistem</li>
-                    <li><strong>onDestroy() : Mengahapus seluruh resource activity yang ada</strong></li>
-                    <li><strong>onRestart() : restart kembali activity </strong></li>
-                </ul>
-        <li>
-            <strong>Android Fragments</strong> 
-            Android fragment merepresentasikan satu buah user interface screen pada aplikasi. Best practicenya adalah memecah aktivitas kebeberapa fragment
-            ,dalam kasus ini activity bertindak sebagai container yang berisi 1 sampai N fragments.
-        </li><br>
-        <li><strong>Android intents</strong></li>
-        </li>
-    </ul>
-</body>
-</html>
+-   **Activity Manager** : Control seluruh aspek aplikasi lifecycle dan tumpukan aktivitas
+-   **Content Providers** : Membolehkan aplikasi untuk di publish dan membagikan data dengan aplikasi lain
+-   **Resource Manager** : Menyediakan akses ke non code embedded resources seperti **String, color settings, dan user interface layouts.**
+-   **Notifications Manager**: Membolehkan aplikasi untuk display **Alert atau notifikasi** kepada user
+
+Anantomy of an Android application
+----------------------------------
+
+Aplikasi android dibentuk dengan cara mengabungkan satu atau lebih komponen yang dikenal dengan **Activities**
+
+**Android Activities** Sebuah activity adalah standalone module dari **sebuah** fungsionalitas aplikasi Sebagai contoh , apabila memiliki apliaksi email, ada sebuah activity yang tugasnya untuk **Mengirim pesan** dant ada juga activity yang tugasnya untuk **Validasi Email**
+
+#### Note untuk Android Activity
+
+![](Android_cycles.png)
+
+-   **onCreate()** : Inisiasi kebutuhan activity seperti variable dan komponen lainnya
+-   **onStart()** : Dieksekusi sehingga activity dilihat oleh user
+-   **onResume()** : Dieksekusi jika user berinteraksi dengan aplikasi
+-   **onPause()**: Dieksekusi jika activity berjalan di latarbelakang / sedang digantikan oleh actvitiy lain
+-   **onStop()** : Dieksekusi jika sistem kehabisan memori / diberhentikan oleh algoritma / sistem
+-   **onDestroy() : Mengahapus seluruh resource activity yang ada**
+-   **onRestart() : restart kembali activity**
+
+**Android Fragments** Android fragment merepresentasikan satu buah user interface screen pada aplikasi. Best practicenya adalah memecah aktivitas kebeberapa fragment ,dalam kasus ini activity bertindak sebagai container yang berisi 1 sampai N fragments.
+
+**Android intents**
