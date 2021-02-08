@@ -11,9 +11,8 @@
         android:id="@+id/etFirstName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Firstname"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toStartOf="@+id/etLastName"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,8 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Lastname"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/etFirstName"
@@ -38,8 +37,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Birth"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,11 +70,11 @@
         android:id="@+id/tvHitung"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/dahlah"
         android:paddingTop="15dp"
+        android:text="@string/dahlah"
+        android:textAlignment="center"
         android:textColor="@color/design_default_color_error"
         android:textSize="25sp"
-        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNgopi" />
@@ -88,4 +87,169 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvHitung" />
+
+    <EditText
+        android:id="@+id/etFirstNum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:hint="FirstNum"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/etSecNum"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTambah" />
+
+    <EditText
+        android:id="@+id/etSecNum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="SecondNum"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etFirstNum"
+        app:layout_constraintTop_toBottomOf="@+id/btnTambah" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:layout_margin="15dp"
+        android:text="Tambahin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etFirstNum" />
+
+    <TextView
+        android:id="@+id/tvHasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:hint="Hasil"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/etSecNum"
+        app:layout_constraintTop_toBottomOf="@+id/etSecNum" />
+
+    <Button
+        android:id="@+id/btnGambar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingTop="15dp"
+        android:text="MauGambar?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imvGithub" />
+
+
+    <ImageView
+        android:id="@+id/imvGithub"
+        android:layout_width="16dp"
+        android:layout_height="17dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHasil" />
+
+    <RadioGroup
+        android:id="@+id/rgQuest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPesan">
+
+        <RadioButton
+            android:id="@+id/rbmartabak"
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:text="martabak" />
+
+        <RadioButton
+            android:id="@+id/rbtelor"
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:text="Telor" />
+
+        <RadioButton
+            android:id="@+id/rbsapi"
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:text="Sapi" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvPesan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:layout_marginTop="24dp"
+        android:text="PeSan Apa mas ? "
+        android:textSize="5sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGambar" />
+
+    <CheckBox
+        android:id="@+id/cbGratis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gratis"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgQuest" />
+
+    <CheckBox
+        android:id="@+id/cbsimon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Simon"
+        app:layout_constraintEnd_toStartOf="@+id/btnOrder"
+        app:layout_constraintStart_toEndOf="@+id/cbgojay"
+        app:layout_constraintTop_toBottomOf="@+id/rgQuest" />
+
+    <CheckBox
+        android:id="@+id/cbgojay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gojay"
+        app:layout_constraintEnd_toStartOf="@+id/btnOrder"
+        app:layout_constraintHorizontal_bias="0.179"
+        app:layout_constraintStart_toEndOf="@+id/cbGratis"
+        app:layout_constraintTop_toBottomOf="@+id/rgQuest" />
+
+    <TextView
+        android:id="@+id/tvListPesanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbsimon"
+        app:layout_constraintVertical_bias="0.203" />
+
+    <Button
+        android:id="@+id/btnOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.876"
+        app:layout_constraintStart_toEndOf="@+id/cbGratis"
+        app:layout_constraintTop_toBottomOf="@+id/rgQuest" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
