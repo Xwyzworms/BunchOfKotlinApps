@@ -1,4 +1,9 @@
 package com.example.intentions
 
-class Manusia {
-}
+import java.io.Serializable
+
+class Manusia(name:String , umur: Int, kota :String) : Serializable{
+    val name= name
+    val umur = umur
+    val kota = kota
+ }
