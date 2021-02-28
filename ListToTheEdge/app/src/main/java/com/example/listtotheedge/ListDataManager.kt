@@ -17,9 +17,9 @@ class ListDataManager (private val context : Context) {
         val sharedPrefencesContents = sharedPrefences.all
         val taskLists = ArrayList<TaskList>()
 
-        for (tasklist in sharedPrefencesContents){
-            val itemHashSet = ArrayList(tasklist.value as HashSet<String>)
-            val list = TaskList(tasklist.key, itemHashSet)
+        for (taskList in sharedPrefencesContents){
+            val itemHashSet = ArrayList(taskList.value as HashSet<String>)
+            val list = TaskList(taskList.key, itemHashSet)
 
             taskLists.add(list)
 
