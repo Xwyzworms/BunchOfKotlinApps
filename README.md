@@ -36,3 +36,4 @@ Aplikasi android dibentuk dengan cara mengabungkan satu atau lebih komponen yang
 **Android Fragments** Android fragment merepresentasikan satu buah user interface screen pada aplikasi. Best practicenya adalah memecah aktivitas kebeberapa fragment ,dalam kasus ini activity bertindak sebagai container yang berisi 1 sampai N fragments.
 
 **Android intents**
+ dahlah malrrr
