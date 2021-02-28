@@ -11,9 +11,10 @@ import android.widget.EditText
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-private lateinit var listsRecyclerView: RecyclerView
 class MainActivity : AppCompatActivity() {
-
+    private val listDataManager: ListDataManager = ListDataManager(this)
+    private lateinit var listsRecyclerView: RecyclerView
+    private val lists = listDataManager.readLists()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -21,7 +22,8 @@ class MainActivity : AppCompatActivity() {
 
         listsRecyclerView = findViewById(R.id.lists_recyclerview)
         listsRecyclerView.layoutManager = LinearLayoutManager(this)
-        listsRecyclerView.adapter = ListSelectionRecyclerViewAdapter()
+        listsRecyclerView.adapter = ListSelectionRecyclerViewAdapter(lists)
+
 
         val fab: FloatingActionButton = findViewById(R.id.fab)
         fab.setOnClickListener {
@@ -33,6 +35,11 @@ class MainActivity : AppCompatActivity() {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu_main, menu)
         return true
+    }
+    private fun addList(list:TaskList){
+        lists.add(list)
+        notif
+
     }
     private fun showCreateListDialog() : Unit{
 
@@ -49,11 +56,16 @@ class MainActivity : AppCompatActivity() {
         alertBuilder.setTitle((dialogtitles))
         alertBuilder.setView(listEditText)
         alertBuilder.setPositiveButton(addButtonTitle){dialog, _ ->
+            val list =TaskList(listEditText.text.toString())
+            listDataManager.saveList(list)
+            val recyclerAdapter = listsRecyclerView.adapter as ListSelectionRecyclerViewAdapter
+            recyclerAdapter.addList(list)
             dialog.dismiss()
         }
 
         alertBuilder.create().show()
     }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
