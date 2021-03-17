@@ -1,5 +1,6 @@
 package com.pritim.anggotarestapi
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -9,6 +10,7 @@ import com.pritim.anggotarestapi.Config.NetworkModule
 import com.pritim.anggotarestapi.Model.getdata.DataItem
 import com.pritim.anggotarestapi.Model.getdata.ResponseGetdata
 import com.pritim.anggotarestapi.adapter.DataAdapter
+import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -19,6 +21,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val recyclerview : RecyclerView = findViewById(R.id.recyclerViewLayout)
+        flAddData.setOnClickListener{
+            val intent = Intent(this,InputActivity::class.java)
+            startActivity(intent)
+        }
         val listAnggota  : Call<ResponseGetdata> =  NetworkModule.service().getData()
         listAnggota.enqueue(object : Callback<ResponseGetdata>{
             override fun onResponse(call: Call<ResponseGetdata>, response: Response<ResponseGetdata>) {
